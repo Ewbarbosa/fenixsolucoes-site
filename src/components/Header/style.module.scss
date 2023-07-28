@@ -1,0 +1,93 @@
+.container {
+  height: 5rem;
+  width: 100vw;
+  top: 0;
+  position: fixed;
+  box-shadow: 0 0 8px 5px;
+  background-color: var(--primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;  
+}
+
+.logo {
+  width: 130px;
+  height: 80px;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.bars {
+  color: var(--white);
+  position: fixed;
+  right: 40px;
+  cursor: pointer;
+  transition: transform 0.4s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  @media(min-width: 768px) {
+    display: none;
+  }
+}
+
+.listMenu {
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+  margin-right: 1.5rem;
+  transition: transform 0.5s ease;
+
+  li {
+    padding: 1rem;
+
+    a {
+      cursor: pointer;
+      text-decoration: none;
+      color: var(--white);
+      transition: color 0.5s;
+
+      &:hover {
+        color: var(--orange);
+      }
+    }
+  }
+
+  li:last-child{
+    border: 2px solid var(--orange);
+    border-radius: 2rem;
+    padding: 0.8rem;
+    color: var(--white);
+    transition: background-color 0.5s;
+    cursor: pointer;
+
+    &:hover{
+      background-color: var(--orange);      
+    }
+
+    a{
+      color: var(--white);
+    }
+  }
+
+  // aqui é usado media query para alterar entre os tamanhos de resolução
+  @media(max-width: 768px) {
+    margin: 0;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--primary);
+    position: fixed;
+    top: 5.1rem;
+    right: 0;
+    width: 100vw;
+    height: 100vh;    
+
+    &.show {
+      //transition: none;
+      transform: translate(100%);      
+    }
+  }
+}

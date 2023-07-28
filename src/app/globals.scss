@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  //box-sizing: border-box;
+
+  font-family: sans-serif;
+}
+
+body {
+  background-color: var(--primary);
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+
+:root {
+  --primary: #222831;
+  --secundary: #393E46;
+
+  --white: #EEEEEE;
+  --black: rgb(0, 0, 0);
+
+  --orange: #FD7014;
+  --red: #FF0000;
+}
+
+body,
+input,
+textarea,
+select,
+button {
+  font: 400, 1rem sans-serif;  
+}
+
+h2{
+  color: var(--white);
+}
+
+p{
+  color: var(--white);  
+}
+
+article{
+  color: var(--white);    
+}

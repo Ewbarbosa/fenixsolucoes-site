@@ -1,0 +1,12 @@
+.container{
+  margin-top: 8rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 22px;
+  color: var(--white);
+}
