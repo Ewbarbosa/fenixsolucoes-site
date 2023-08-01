@@ -1,10 +1,38 @@
 import style from './page.module.scss'
 
+import santaTerezinha from '../../public/image/clients/santaTerezinha.jpg'
+import primatus from '../../public/image/clients/primatus.jpg'
+import muvuca from '../../public/image/clients/muvuca.jpg'
+
 import { Header } from '../components/Header/page'
 import { Footer } from '../components/Footer/page'
 import { Button } from '../components/Button/page'
 
+import Image from 'next/image'
+
 export default function Home() {
+
+  const coments = [
+    {
+      id: 1,
+      text: 'Usando Fênix ERP para o nosso comercio, conseguimos uma gestão de todos departamentos interligados Pedido de compras , notas de entrada , coletor de dados, contas à pagar, precificação, eliminando erros de preço, estoque, ruptura. Tempo de resposta rápido, ficamos muito satisfeitos com o resultado final!',
+      autor: 'Depósito Santa Terezinha',
+      img: santaTerezinha
+    },
+    {
+      id: 2,
+      text: 'O sistema ERP simplifica nossos processos internos, tornando a gestão de estoque e as operações de vendas mais rápidas e eficientes. Além disso, a empresa oferece um excelente suporte, respondendo prontamente a todas as nossas dúvidas. Estamos extremamente satisfeitos com os resultados.',
+      autor: 'Supermercado Primatus',
+      img: primatus
+    },
+    {
+      id: 3,
+      text: 'Realizam manutenções em nossos caixas sempre que precisamos, a equipe resolve os problemas de forma rápida, garantindo que o sistema voltasse a funcionar o quanto antes. Estamos satisfeitos com o serviço prestado. Recomendamos seus serviços de manutenção com confiança.',
+      autor: 'Muvuca Variedades',
+      img: muvuca
+    }
+  ]
+
   return (
     <div className={style.container}>
       <Header />
@@ -40,16 +68,17 @@ export default function Home() {
         </div>
 
         <div className={style.metrics}>
-          <p>Com o Fênix ERP nossos clientes realizam diariamente</p><br/>
+
+          <p>Nossos clientes realizam diariamente</p><br />
           <p>+25000 Vendas CFE/SAT</p>
           <p>+3000 Pedidos de Vendas</p>
-          <p>+1000 Recebimento de Notas Fiscais Compras</p>
-          <p>+15000 Transações TEF</p><br/><br/><br/>
-
-          <p>Clique em Saiba Mais e agenda uma demonstração</p>
+          <p>+1000 Recebimento de Notas</p>
+          <p>+15000 Transações TEF</p><br /><br /><br />
         </div>
 
         <div className={style.buttonInfo}>
+          <p>Quer saber mais?</p>
+          <p>Clique no botão abaixo e fale conosco</p>
           <form action='/contact' method="get">
             <Button>
               Saiba mais
@@ -62,30 +91,17 @@ export default function Home() {
       <div className={style.containerReports}>
         <p className={style.titleReport}>Sabia o que nossos clientes acham</p>
 
-        <div className={style.report}>
-          <article>
-            <i>Usando Fênix ERP para o nosso comercio, conseguimos uma gestão de todos departamentos interligados Pedido de compras , notas de entrada , coletor de dados, contas à pagar, precificação, eliminando erros de preço, estoque, ruptura.
-              Tempo de resposta rápido, ficamos muito satisfeitos com o resultado final!</i>
-          </article><br />
-          <p> - Depósito Santa Terezinha</p>
-        </div>
-
-        <div className={style.report}>
-          <article><i>
-            O sistema ERP simplifica nossos processos internos, tornando a gestão de estoque e as operações de vendas mais rápidas e eficientes.
-            Além disso, a empresa oferece um excelente suporte, respondendo prontamente a todas as nossas dúvidas.
-            Estamos extremamente satisfeitos com os resultados.</i>
-          </article><br />
-          <p> - Supermercado Primatus</p>
-        </div>
-
-        <div className={style.report}>
-          <article><i>
-            Realizam manutenções em nossos caixas sempre que precisamos, a equipe resolve os problemas de forma rápida, garantindo que o sistema voltasse a funcionar o quanto antes.
-            Estamos satisfeitos com o serviço prestado. Recomendamos seus serviços de manutenção com confiança.</i>
-          </article><br />
-          <p> - Muvuca Variedades</p>
-        </div>
+        {coments.map((coments) => (
+          <div className={style.report} key={coments.id}>
+            <div className={style.profile}>
+              <Image className={style.imgAutor} src={coments.img} alt='Comentários' />
+              <p>{coments.autor}</p>
+            </div>
+            <article>
+              <i>{coments.text}</i>
+            </article><br />
+          </div>
+        ))}
 
       </div>
 

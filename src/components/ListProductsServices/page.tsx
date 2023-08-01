@@ -1,7 +1,6 @@
 import style from './style.module.scss'
 
 import Image from 'next/image'
-import serviceCode from '../../../public/image/serviceCode2.jpg'
 import serviceNetwork from '../../../public/image/serviceNetwork.jpg'
 import serviceHardware from '../../../public/image/serviceHardware.jpg'
 import pdv from '../../../public/image/pdv.jpg'
