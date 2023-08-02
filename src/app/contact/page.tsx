@@ -11,6 +11,9 @@ import { FormEvent, useState, useRef } from 'react'
 
 import emailjs from '@emailjs/browser'
 
+import React from 'react'
+import { toast } from 'react-toastify';
+
 import ReCAPTCHA from 'react-google-recaptcha'
 
 export default function Contact() {
@@ -24,6 +27,8 @@ export default function Contact() {
 
   const [loading, setLoading] = useState(false);
   const [checked, setChecked] = useState(true);
+
+  const notify = () => toast.success('Facil');
 
   function handleMessage(event: FormEvent) {
     event.preventDefault();
@@ -46,7 +51,7 @@ export default function Contact() {
         captcha.current.reset();
 
         setLoading(false);
-        setChecked(true);        
+        setChecked(true);
 
       }, (error) => {
         console.log(error.text)
@@ -62,22 +67,31 @@ export default function Contact() {
   }
 
   return (
-    <div className={style.container}>
+    <div className={style.container}>      
       <Header />
       <p className={style.title}>Preencha o formulário com seus dados e em breve retornaremos o contato!</p>
 
       <form ref={form} className={style.form} onSubmit={handleMessage}>
 
         <Input
-          placeholder='Informe seu nome'
+          placeholder='Nome'
           value={name}
           name={'from_name'}
           onChange={(e) => setName(e.target.value)}
         />
 
         <Input
-          placeholder='Telefone para contato'
+          placeholder='Telefone'
           type='number'
+          value={telephone}
+          name={'contact'}
+          onClick={notify}
+          onChange={(e) => setTelephone(e.target.value)}
+        />
+
+        <Input
+          placeholder='E-mail'
+          type='email'
           value={telephone}
           name={'contact'}
           onChange={(e) => setTelephone(e.target.value)}
@@ -96,7 +110,7 @@ export default function Contact() {
           loading={loading}
           disabled={checked}
         >
-          Solicitar contato
+          Enviar
         </Button>
 
         <ReCAPTCHA
@@ -104,7 +118,7 @@ export default function Contact() {
           sitekey='6Lf8Y0InAAAAACXg65E_o9yRPrUqNatnzn9Ax9-y'
           onChange={onChange}
           size={'compact'}
-          theme={'dark'}          
+          theme={'dark'}
         />
 
       </form>

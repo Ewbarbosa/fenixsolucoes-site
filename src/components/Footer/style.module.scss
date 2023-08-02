@@ -10,16 +10,16 @@
 }
 
 .footerContent {
-  height: auto;  
+  height: auto;
   display: flex;
   align-items: center;
-  justify-content: center;  
-  flex-direction: column;  
+  justify-content: space-around;
+  flex-direction: row;
 }
 
-.mediaSocial {  
+.mediaSocial {
 
-  svg {    
+  svg {
     padding: 0.5rem;
     color: var(--white);
     transition: 0.4s;
@@ -36,4 +36,29 @@
     margin-bottom: 10px;
     color: var(--white);
   }
+}
+
+.contact {
+  width: auto;
+  height: auto;
+  //border: 1px solid var(--white);
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+
+  section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;    
+    padding: 0.5rem;
+  }
+
+  svg {
+    color: var(--white);
+    margin-right: 1rem;
+  }
+
 }
