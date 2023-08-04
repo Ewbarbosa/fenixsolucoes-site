@@ -10,48 +10,48 @@ import { MdMyLocation, MdEmail } from 'react-icons/md'
 export function Footer() {
   return (
     <footer>
-      <div className={style.footerContainer}>
-        <div className={style.footerContent}>
+      <div className={style.content}>
 
-          <div className={style.contact}>
-            <section>
-              <BsTelephone size={22} />
-              <p>11 99153-9492 | 11 3567-3512</p>
-            </section>
+        <div className={style.siteInfo}>
+          <p>Atendimento:</p>
+          <p>Segunda à Sábado das 8:00 às 18:00</p>
+          <p>Domingo Plantão PDV</p>
+        </div>
 
-            <section>
-              <MdEmail size={22} />
-              <p>contato@fenixme.com.br</p>
-            </section>
+        <div className={style.contact}>
+          <section>
+            <BsTelephone size={22} />
+            <p>11 99153-9492 | 11 3567-3512</p>
+          </section>
 
-            <section>
-              <MdMyLocation size={22} />
-              <p>Av. das Nações, 673 - Parque Novo Oratório</p>                            
-            </section>
-            <p>Santo André - SP, 09260-000</p>
-          </div>
+          <section>
+            <MdEmail size={22} />
+            <p>contato@fenixme.com.br</p>
+          </section>
 
-          <div className={style.mediaSocial}>
-            <Link href='https://wa.me/message/HVZ3XEWUPKDGG1' target='_blank'>
-              <FaWhatsapp size={22} />
-            </Link>
+          {/*
+          <section>
+            <MdMyLocation size={22} />
+            <p>Av. das Nações, 673 - Parque Novo Oratório</p>
+          </section>
+          <p>Santo André - SP, 09260-000</p>
+          */}
+        </div>
 
-            <Link href='https://www.facebook.com/fenixsolucoesinteligentes' target="_blank">
-              <FaFacebookSquare size={22} />
-            </Link>
+        <div className={style.mediaSocial}>
+          <Link href='https://wa.me/message/HVZ3XEWUPKDGG1' target='_blank'>
+            <FaWhatsapp size={22} />
+          </Link>
 
-            <Link href='https://www.instagram.com/_fenixme_/' target="_blank">
-              <FaInstagram size={22} />
-            </Link>
+          <Link href='https://www.facebook.com/fenixsolucoesinteligentes' target="_blank">
+            <FaFacebookSquare size={22} />
+          </Link>
 
-            <FaLinkedinIn size={22} />
-          </div>
+          <Link href='https://www.instagram.com/_fenixme_/' target="_blank">
+            <FaInstagram size={22} />
+          </Link>
 
-          <div className={style.siteInfo}>
-            <p>
-              FenixME 2023 &copy;
-            </p>
-          </div>
+          <FaLinkedinIn size={22} />
         </div>
       </div>
     </footer>
