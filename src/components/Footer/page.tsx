@@ -10,6 +10,7 @@ import { MdMyLocation, MdEmail } from 'react-icons/md'
 export function Footer() {
   return (
     <footer>
+
       <div className={style.content}>
 
         <div className={style.siteInfo}>
@@ -53,6 +54,7 @@ export function Footer() {
 
           <FaLinkedinIn size={22} />
         </div>
+        
       </div>
     </footer>
   )

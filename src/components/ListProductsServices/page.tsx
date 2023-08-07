@@ -29,22 +29,21 @@ export function ListProductsServices() {
   ]
 
   return (
-    <>
-      <div className={style.containerBox}>
+    <div className={style.containerBox}>
 
-        {services.map((service) => (
-          <div className={style.box} key={service.id}>
-            <Image className={style.imgService} src={service.img} alt={service.title} />
-            <div className={style.content}>
-              <p>{service.title}</p>
-              <article>
-                {service.text}
-              </article>
-            </div>
+      {services.map((service) => (
+        <div className={style.box} key={service.id}>
+          <Image className={style.imgService} src={service.img} alt={service.title} />
+          <div className={style.content}>
+            <p>{service.title}</p>
+            <article>
+              {service.text}
+            </article>
           </div>
-        ))}
+        </div>
+      ))}
 
-      </div>
-    </>
+    </div>
+
   )
 }

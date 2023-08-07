@@ -25,13 +25,13 @@ export function Header() {
 
       <Link href='/'>
         <Image className={style.logo} src={logo} alt='Logo Fenix Soluções' />
-      </Link>      
+      </Link>
 
       {
         menu ?
-        <FaBars className={style.bars} onClick={showMenu} size={24} />
-        : <FaTimes className={style.bars} onClick={showMenu} size={24} />
-      }      
+          <FaBars className={style.bars} onClick={showMenu} size={24} />
+          : <FaTimes className={style.bars} onClick={showMenu} size={24} />
+      }
 
       {/* foi usado template string pra alterar o comportamento da classe */}
       <ul className={`${style.listMenu} ${menu ? style.show : ""}`}>

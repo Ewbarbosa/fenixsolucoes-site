@@ -4,7 +4,7 @@ import { Header } from '../../components/Header/page'
 import { Footer } from '@/components/Footer/page'
 import { Slider } from '../../components/Slider/page'
 
-export default function Clients() {    
+export default function Clients() {
 
   return (
     <>
@@ -14,7 +14,7 @@ export default function Clients() {
           Nossos clientes
         </p>
 
-        <Slider />    
+        <Slider />
 
       </div>
       <Footer />

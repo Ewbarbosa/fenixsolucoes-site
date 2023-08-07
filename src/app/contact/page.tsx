@@ -62,12 +62,12 @@ export default function Contact() {
 
   function onChange(value: any) {
 
-    console.log('Capt', value)
+    //console.log('Capt', value)
     setChecked(false);
   }
 
   return (
-    <div className={style.container}>      
+    <div className={style.container}>
       <Header />
       <p className={style.title}>Preencha o formulário com seus dados e em breve retornaremos o contato!</p>
 
@@ -122,7 +122,9 @@ export default function Contact() {
         />
 
       </form>
+
       <Footer />
+
     </div>
   )
 }

@@ -9,7 +9,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode
 }
 
-export function Button({loading, children, ...rest }: ButtonProps) {
+export function Button({ loading, children, ...rest }: ButtonProps) {
   return (
     <button
       className={style.button}
@@ -22,7 +22,7 @@ export function Button({loading, children, ...rest }: ButtonProps) {
         <a className={style.buttonText}>
           {children}
         </a>
-      )}      
+      )}
     </button>
   )
 }

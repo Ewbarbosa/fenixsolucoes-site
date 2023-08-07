@@ -37,7 +37,7 @@ export default function Home() {
     <div className={style.container}>
       <Header />
 
-      <div className={style.contents}>
+      <div className={style.content}>
 
         <div className={style.content_A}>
           <p>Conheça a Solução Fênix ERP</p>
@@ -52,7 +52,7 @@ export default function Home() {
 
           <div className={style.card}>
             <p>Dinâmico</p>
-            <article>Capaz de atender aos requisitos específicos do seu setor, tamanho e fluxo de trabalho,</article>
+            <article>Capaz de atender aos requisitos específicos do seu setor, tamanho e fluxo de trabalho.</article>
           </div>
 
           <div className={style.card}>
@@ -62,13 +62,12 @@ export default function Home() {
 
           <div className={style.card}>
             <p>Custo</p>
-            <article>Preço diferenciado do mercado. Pague pelo número de pontos de venda</article>
+            <article>Preço diferenciado do mercado. Pague pelo número de pontos de venda.</article>
           </div>
 
         </div>
 
         <div className={style.metrics}>
-
           <p>Nossos clientes realizam diariamente</p><br />
           <p>+25000 Vendas CFE/SAT</p>
           <p>+3000 Pedidos de Vendas</p>
