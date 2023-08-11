@@ -1,3 +1,5 @@
+"use client"
+
 import style from './page.module.scss'
 
 import santaTerezinha from '../../public/image/clients/santaTerezinha.jpg'
@@ -7,8 +9,10 @@ import muvuca from '../../public/image/clients/muvuca.jpg'
 import { Header } from '../components/Header/page'
 import { Footer } from '../components/Footer/page'
 import { Button } from '../components/Button/page'
+import { Loading } from '../components/Loading/page'
 
 import Image from 'next/image'
+import { useState, useEffect } from 'react'
 
 export default function Home() {
 
@@ -32,6 +36,12 @@ export default function Home() {
       img: muvuca
     }
   ]
+
+  const [removeLoading, setRemoveLoading] = useState(false);
+
+  useEffect(() => {
+    setRemoveLoading(true);
+  }, [])
 
   return (
     <div className={style.container}>
@@ -101,8 +111,9 @@ export default function Home() {
             </article><br />
           </div>
         ))}
-
       </div>
+
+      {!removeLoading && <Loading />}
 
       <Footer />
     </div >
