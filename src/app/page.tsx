@@ -37,11 +37,13 @@ export default function Home() {
     }
   ]
 
-  const [removeLoading, setRemoveLoading] = useState(false);
+  //const [removeLoading, setRemoveLoading] = useState(false);
 
+  { /* 
   useEffect(() => {
     setRemoveLoading(true);
   }, [])
+  */ }
 
   return (
     <div className={style.container}>
@@ -113,7 +115,9 @@ export default function Home() {
         ))}
       </div>
 
+      { /* 
       {!removeLoading && <Loading />}
+      */}
 
       <Footer />
     </div >

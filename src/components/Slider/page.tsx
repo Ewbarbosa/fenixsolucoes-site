@@ -18,6 +18,7 @@ import primatus from '../../../public/image/clients/primatus.jpg'
 import vivene from '../../../public/image/clients/vivene.jpg'
 import santaTerezinha from '../../../public/image/clients/santaTerezinha.jpg'
 import centreville from '../../../public/image/clients/centreville.png'
+import diniz from '../../../public/image/clients/diniz.png'
 
 
 // imports relacionados ao Swiper
@@ -70,16 +71,17 @@ export function Slider() {
     { id: 10, img: primatus },
     { id: 11, img: vivene },
     { id: 12, img: santaTerezinha },
-    { id: 13, img: centreville }
+    { id: 13, img: centreville },
+    { id: 14, img: diniz }
   ]
 
   return (
     <>
-      <Swiper 
-        className={style.swiper}          
+      <Swiper
+        className={style.swiper}
         spaceBetween={10}
-        slidesPerView={slidePreview}        
-        pagination={{clickable: true}}
+        slidesPerView={slidePreview}
+        pagination={{ clickable: true }}
         navigation
       >
         {data.map((item) => (

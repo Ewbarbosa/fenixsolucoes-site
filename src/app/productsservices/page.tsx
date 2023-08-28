@@ -11,11 +11,13 @@ import { useState, useEffect } from 'react'
 
 export default function ProductsServices() {
 
-  const [removeLoading, setRemoveLoading] = useState(false);
+  //const [removeLoading, setRemoveLoading] = useState(false);
 
+  /*
   useEffect(() => {
     setRemoveLoading(true);
   }, [])
+  */
 
   return (
     <>
@@ -28,8 +30,10 @@ export default function ProductsServices() {
 
         <ListProductsServices />
       </div>
-
+      
+      { /* 
       {!removeLoading && <Loading />}
+      */}
 
       <Footer />
     </>
