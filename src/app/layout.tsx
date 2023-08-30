@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 
 const inter = Inter({ subsets: ['latin'] })
 
+// import do component barra de progresso
 import Providers from './providers';
 
 export const metadata = {
@@ -18,8 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en">
 
-      <body className={inter.className}>{children}
+      <body className={inter.className}>
 
+        { /*
+          importar o Providers para usar a barra de progresso
+        */}
         <Providers>{children}</Providers>
 
       </body>
