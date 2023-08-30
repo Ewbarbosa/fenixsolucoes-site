@@ -1,7 +1,9 @@
 import './globals.scss'
-import { Inter } from 'next/font/google'
+import { Inter } from 'next/font/google';
 
 const inter = Inter({ subsets: ['latin'] })
+
+import Providers from './providers';
 
 export const metadata = {
   title: 'Fenix - Soluções Inteligentes',
@@ -15,7 +17,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+
+      <body className={inter.className}>{children}
+
+        <Providers>{children}</Providers>
+
+      </body>
     </html>
   )
 }
